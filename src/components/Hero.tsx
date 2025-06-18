@@ -7,11 +7,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 font-montserrat">
-            Игровая вселенная
-            <span className="text-purple-400"> в одном месте</span>
+            ИГРОЗНАЙ
+            <span className="text-purple-400"> - игровая вселенная</span>
           </h1>
           <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-            Новости, обзоры, рейтинги и эксклюзивные статьи о мире видеоигр.
+            Статьи, новости и эксклюзивные материалы о мире видеоигр.
             Оставайтесь в курсе всех событий игровой индустрии.
           </p>
 
@@ -24,15 +24,15 @@ const Hero = () => {
               <span>Читать статьи</span>
             </Link>
             <Link
-              to="/ratings"
+              to="/news"
               className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center space-x-2"
             >
-              <Icon name="Star" size={20} />
-              <span>Смотреть рейтинги</span>
+              <Icon name="Newspaper" size={20} />
+              <span>Свежие новости</span>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
             <div className="text-center">
               <div className="bg-slate-800 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Icon name="Newspaper" size={24} className="text-blue-400" />
@@ -41,13 +41,6 @@ const Hero = () => {
               <p className="text-slate-400">
                 Актуальные события игровой индустрии
               </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-slate-800 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Icon name="Trophy" size={24} className="text-yellow-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Рейтинги игр</h3>
-              <p className="text-slate-400">Честные оценки и обзоры</p>
             </div>
             <div className="text-center">
               <div className="bg-slate-800 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">

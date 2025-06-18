@@ -42,34 +42,26 @@ const ArticlesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-slate-900 font-montserrat">
-            Лучшие статьи
-          </h2>
-          <Link
-            to="/articles"
-            className="text-purple-600 hover:text-purple-700 font-semibold flex items-center space-x-1"
-          >
-            <span>Все статьи</span>
-            <Icon name="ArrowRight" size={16} />
-          </Link>
-        </div>
+    <section>
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold text-slate-900 font-montserrat mb-2">
+          Лучшие статьи
+        </h2>
+        <p className="text-slate-600">Глубокие материалы о мире игр</p>
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
-            <article
-              key={article.id}
-              className={`${index === 0 ? "lg:col-span-2 lg:row-span-2" : ""} bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow group`}
-            >
-              <div className="relative overflow-hidden">
+      <div className="space-y-8">
+        {articles.map((article, index) => (
+          <article
+            key={article.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow group"
+          >
+            <div className="md:flex">
+              <div className="md:w-1/3 relative overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
-                  className={`w-full object-cover group-hover:scale-105 transition-transform duration-300 ${
-                    index === 0 ? "h-80" : "h-48"
-                  }`}
+                  className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -78,17 +70,11 @@ const ArticlesSection = () => {
                 </div>
               </div>
 
-              <div className={`p-6 ${index === 0 ? "lg:p-8" : ""}`}>
-                <h3
-                  className={`font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-purple-600 transition-colors ${
-                    index === 0 ? "text-2xl lg:text-3xl" : "text-xl"
-                  }`}
-                >
+              <div className="md:w-2/3 p-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">
                   {article.title}
                 </h3>
-                <p
-                  className={`text-slate-600 mb-4 ${index === 0 ? "text-lg line-clamp-4" : "line-clamp-3"}`}
-                >
+                <p className="text-slate-600 mb-4 text-lg leading-relaxed">
                   {article.excerpt}
                 </p>
 
@@ -102,13 +88,29 @@ const ArticlesSection = () => {
                       <Icon name="Clock" size={14} />
                       <span>{article.readTime}</span>
                     </div>
+                    <span className="text-slate-400">{article.date}</span>
                   </div>
-                  <span className="text-slate-400 text-sm">{article.date}</span>
+                  <Link
+                    to="/articles"
+                    className="text-purple-600 hover:text-purple-700 font-semibold flex items-center space-x-1"
+                  >
+                    <span>Читать</span>
+                    <Icon name="ArrowRight" size={16} />
+                  </Link>
                 </div>
               </div>
-            </article>
-          ))}
-        </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="text-center mt-8">
+        <Link
+          to="/articles"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+        >
+          Все статьи
+        </Link>
       </div>
     </section>
   );

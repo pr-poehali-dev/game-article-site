@@ -10,12 +10,11 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Icon name="Gamepad2" size={24} className="text-purple-400" />
               <span className="text-xl font-bold text-white font-montserrat">
-                GameHub
+                ИГРОЗНАЙ
               </span>
             </div>
             <p className="text-slate-400 mb-4">
-              Ваш главный источник новостей, обзоров и аналитики в мире
-              видеоигр.
+              Ваш главный источник новостей и аналитики в мире видеоигр.
             </p>
             <div className="flex space-x-4">
               <a
@@ -122,7 +121,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 mt-8 text-center text-slate-400">
-          <p>&copy; 2024 GameHub. Все права защищены.</p>
+          <p>&copy; 2024 ИГРОЗНАЙ. Все права защищены.</p>
         </div>
       </div>
     </footer>

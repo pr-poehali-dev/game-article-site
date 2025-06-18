@@ -9,7 +9,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Icon name="Gamepad2" size={28} className="text-purple-400" />
             <span className="text-2xl font-bold text-white font-montserrat">
-              GameHub
+              ИГРОЗНАЙ
             </span>
           </Link>
 
@@ -25,12 +25,6 @@ const Header = () => {
               className="text-slate-300 hover:text-purple-400 transition-colors font-medium"
             >
               Новости
-            </Link>
-            <Link
-              to="/ratings"
-              className="text-slate-300 hover:text-purple-400 transition-colors font-medium"
-            >
-              Рейтинги
             </Link>
             <Link
               to="/categories"
